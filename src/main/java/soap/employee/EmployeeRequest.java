@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.02.29 a las 08:16:26 PM COT 
+// Generado el: 2020.02.29 a las 10:24:16 PM COT 
 //
 
 
@@ -12,9 +12,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -31,10 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="last_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="document_type" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="document_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="date_birth" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="company_entry_date" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *         &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="salary" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -49,10 +44,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "lastName",
     "documentType",
     "documentNumber",
-    "dateBirth",
-    "companyEntryDate",
-    "role",
-    "salary"
+    "role"
 })
 @XmlRootElement(name = "EmployeeRequest")
 public class EmployeeRequest {
@@ -65,15 +57,8 @@ public class EmployeeRequest {
     protected String documentType;
     @XmlElement(name = "document_number", required = true)
     protected String documentNumber;
-    @XmlElement(name = "date_birth", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dateBirth;
-    @XmlElement(name = "company_entry_date", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar companyEntryDate;
     @XmlElement(required = true)
     protected String role;
-    protected double salary;
 
     /**
      * Obtiene el valor de la propiedad fullName.
@@ -172,54 +157,6 @@ public class EmployeeRequest {
     }
 
     /**
-     * Obtiene el valor de la propiedad dateBirth.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDateBirth() {
-        return dateBirth;
-    }
-
-    /**
-     * Define el valor de la propiedad dateBirth.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDateBirth(XMLGregorianCalendar value) {
-        this.dateBirth = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad companyEntryDate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCompanyEntryDate() {
-        return companyEntryDate;
-    }
-
-    /**
-     * Define el valor de la propiedad companyEntryDate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCompanyEntryDate(XMLGregorianCalendar value) {
-        this.companyEntryDate = value;
-    }
-
-    /**
      * Obtiene el valor de la propiedad role.
      * 
      * @return
@@ -241,22 +178,6 @@ public class EmployeeRequest {
      */
     public void setRole(String value) {
         this.role = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad salary.
-     * 
-     */
-    public double getSalary() {
-        return salary;
-    }
-
-    /**
-     * Define el valor de la propiedad salary.
-     * 
-     */
-    public void setSalary(double value) {
-        this.salary = value;
     }
 
 }

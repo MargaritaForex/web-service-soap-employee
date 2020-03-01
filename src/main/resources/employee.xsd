@@ -8,10 +8,7 @@
                 <xs:element name="last_name" type="xs:string"/>
                 <xs:element name="document_type" type="xs:string"/>
                 <xs:element name="document_number" type="xs:string"/>
-                <xs:element name="date_birth" type="xs:date"/>
-                <xs:element name="company_entry_date" type="xs:date"/>
                 <xs:element name="role" type="xs:string"/>
-                <xs:element name="salary" type="xs:double"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -19,16 +16,7 @@
     <xs:element name="EmployeeResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="full_name" type="xs:string"/>
-                <xs:element name="last_name" type="xs:string"/>
-                <xs:element name="document_type" type="xs:string"/>
-                <xs:element name="document_number" type="xs:string"/>
-                <xs:element name="date_birth" type="xs:date"/>
-                <xs:element name="company_entry_date" type="xs:date"/>
-                <xs:element name="role" type="xs:string"/>
-                <xs:element name="salary" type="xs:double"/>
-                <xs:element name="company_bonding" type="xs:int"/>
-                <xs:element name="age" type="xs:int"/>
+                <xs:element name="Employee" type="tns:Employee"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -39,10 +27,7 @@
             <xs:element name="last_name" type="xs:string"/>
             <xs:element name="document_type" type="xs:string"/>
             <xs:element name="document_number" type="xs:string"/>
-            <xs:element name="date_birth" type="xs:date"/>
-            <xs:element name="company_entry_date" type="xs:date"/>
             <xs:element name="role" type="xs:string"/>
-            <xs:element name="salary" type="xs:double"/>
         </xs:sequence>
     </xs:complexType>
 

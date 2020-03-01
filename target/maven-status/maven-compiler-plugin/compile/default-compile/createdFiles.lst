@@ -1,6 +1,9 @@
 soap\employee\package-info.class
 soap\employee\ObjectFactory.class
+com\employee\soap\repository\EmployeeRepository.class
 com\employee\soap\WebserviceSoapApplication.class
 soap\employee\Employee.class
 soap\employee\EmployeeResponse.class
+com\employee\soap\services\EmployeeEndpoint.class
+com\employee\soap\configuration\Config.class
 soap\employee\EmployeeRequest.class

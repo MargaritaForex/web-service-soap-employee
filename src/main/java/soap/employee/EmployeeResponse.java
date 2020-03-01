@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.02.29 a las 08:16:26 PM COT 
+// Generado el: 2020.02.29 a las 10:24:16 PM COT 
 //
 
 
@@ -12,9 +12,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -27,16 +25,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="full_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="last_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="document_type" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="document_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="date_birth" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="company_entry_date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="salary" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="company_bonding" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="age" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="Employee" type="{employee.soap}Employee"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,255 +36,36 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "fullName",
-    "lastName",
-    "documentType",
-    "documentNumber",
-    "dateBirth",
-    "companyEntryDate",
-    "role",
-    "salary",
-    "companyBonding",
-    "age"
+    "employee"
 })
 @XmlRootElement(name = "EmployeeResponse")
 public class EmployeeResponse {
 
-    @XmlElement(name = "full_name", required = true)
-    protected String fullName;
-    @XmlElement(name = "last_name", required = true)
-    protected String lastName;
-    @XmlElement(name = "document_type", required = true)
-    protected String documentType;
-    @XmlElement(name = "document_number", required = true)
-    protected String documentNumber;
-    @XmlElement(name = "date_birth", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dateBirth;
-    @XmlElement(name = "company_entry_date", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar companyEntryDate;
-    @XmlElement(required = true)
-    protected String role;
-    protected double salary;
-    @XmlElement(name = "company_bonding")
-    protected int companyBonding;
-    protected int age;
+    @XmlElement(name = "Employee", required = true)
+    protected Employee employee;
 
     /**
-     * Obtiene el valor de la propiedad fullName.
+     * Obtiene el valor de la propiedad employee.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Employee }
      *     
      */
-    public String getFullName() {
-        return fullName;
+    public Employee getEmployee() {
+        return employee;
     }
 
     /**
-     * Define el valor de la propiedad fullName.
+     * Define el valor de la propiedad employee.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Employee }
      *     
      */
-    public void setFullName(String value) {
-        this.fullName = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad lastName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLastName() {
-        return lastName;
-    }
-
-    /**
-     * Define el valor de la propiedad lastName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLastName(String value) {
-        this.lastName = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad documentType.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDocumentType() {
-        return documentType;
-    }
-
-    /**
-     * Define el valor de la propiedad documentType.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDocumentType(String value) {
-        this.documentType = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad documentNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDocumentNumber() {
-        return documentNumber;
-    }
-
-    /**
-     * Define el valor de la propiedad documentNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDocumentNumber(String value) {
-        this.documentNumber = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad dateBirth.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDateBirth() {
-        return dateBirth;
-    }
-
-    /**
-     * Define el valor de la propiedad dateBirth.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDateBirth(XMLGregorianCalendar value) {
-        this.dateBirth = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad companyEntryDate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCompanyEntryDate() {
-        return companyEntryDate;
-    }
-
-    /**
-     * Define el valor de la propiedad companyEntryDate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCompanyEntryDate(XMLGregorianCalendar value) {
-        this.companyEntryDate = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad role.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRole() {
-        return role;
-    }
-
-    /**
-     * Define el valor de la propiedad role.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRole(String value) {
-        this.role = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad salary.
-     * 
-     */
-    public double getSalary() {
-        return salary;
-    }
-
-    /**
-     * Define el valor de la propiedad salary.
-     * 
-     */
-    public void setSalary(double value) {
-        this.salary = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad companyBonding.
-     * 
-     */
-    public int getCompanyBonding() {
-        return companyBonding;
-    }
-
-    /**
-     * Define el valor de la propiedad companyBonding.
-     * 
-     */
-    public void setCompanyBonding(int value) {
-        this.companyBonding = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad age.
-     * 
-     */
-    public int getAge() {
-        return age;
-    }
-
-    /**
-     * Define el valor de la propiedad age.
-     * 
-     */
-    public void setAge(int value) {
-        this.age = value;
+    public void setEmployee(Employee value) {
+        this.employee = value;
     }
 
 }
