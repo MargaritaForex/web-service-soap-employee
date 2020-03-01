@@ -32,7 +32,7 @@ public class EmployeeRepository {
             employee.setRole(request.getRole());
             employee.setBirthDate(request.getBirthDate());
             employee.setDateEntryCompany(request.getBirthDate());
-            employee.setSalary(20.22);
+            employee.setSalary(request.getSalary());
             employees.put(request.getFullName(), employee);
             return employees.get(request.getFullName());
         }
