@@ -30,6 +30,9 @@ public class EmployeeRepository {
             employee.setDocumentType(request.getDocumentType());
             employee.setDocumentNumber(request.getDocumentNumber());
             employee.setRole(request.getRole());
+            employee.setBirthDate(request.getBirthDate());
+            employee.setDateEntryCompany(request.getBirthDate());
+            employee.setSalary(20.22);
             employees.put(request.getFullName(), employee);
             return employees.get(request.getFullName());
         }

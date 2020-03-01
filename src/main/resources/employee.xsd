@@ -9,6 +9,9 @@
                 <xs:element name="document_type" type="xs:string"/>
                 <xs:element name="document_number" type="xs:string"/>
                 <xs:element name="role" type="xs:string"/>
+                <xs:element name="birth_date" type="xs:date"/>
+                <xs:element name="date_entry_company" type="xs:date"/>
+                <xs:element name="salary" type="xs:double"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -28,6 +31,9 @@
             <xs:element name="document_type" type="xs:string"/>
             <xs:element name="document_number" type="xs:string"/>
             <xs:element name="role" type="xs:string"/>
+            <xs:element name="birth_date" type="xs:date"/>
+            <xs:element name="date_entry_company" type="xs:date"/>
+            <xs:element name="salary" type="xs:double"/>
         </xs:sequence>
     </xs:complexType>
 

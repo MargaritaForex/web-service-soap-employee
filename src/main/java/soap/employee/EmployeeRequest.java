@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.02.29 a las 10:24:16 PM COT 
+// Generado el: 2020.02.29 a las 10:53:33 PM COT 
 //
 
 
@@ -12,7 +12,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -30,6 +32,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="document_type" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="document_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="birth_date" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="date_entry_company" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="salary" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -44,7 +49,10 @@ import javax.xml.bind.annotation.XmlType;
     "lastName",
     "documentType",
     "documentNumber",
-    "role"
+    "role",
+    "birthDate",
+    "dateEntryCompany",
+    "salary"
 })
 @XmlRootElement(name = "EmployeeRequest")
 public class EmployeeRequest {
@@ -59,6 +67,13 @@ public class EmployeeRequest {
     protected String documentNumber;
     @XmlElement(required = true)
     protected String role;
+    @XmlElement(name = "birth_date", required = true)
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar birthDate;
+    @XmlElement(name = "date_entry_company", required = true)
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar dateEntryCompany;
+    protected double salary;
 
     /**
      * Obtiene el valor de la propiedad fullName.
@@ -178,6 +193,70 @@ public class EmployeeRequest {
      */
     public void setRole(String value) {
         this.role = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad birthDate.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getBirthDate() {
+        return birthDate;
+    }
+
+    /**
+     * Define el valor de la propiedad birthDate.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setBirthDate(XMLGregorianCalendar value) {
+        this.birthDate = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad dateEntryCompany.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDateEntryCompany() {
+        return dateEntryCompany;
+    }
+
+    /**
+     * Define el valor de la propiedad dateEntryCompany.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDateEntryCompany(XMLGregorianCalendar value) {
+        this.dateEntryCompany = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad salary.
+     * 
+     */
+    public double getSalary() {
+        return salary;
+    }
+
+    /**
+     * Define el valor de la propiedad salary.
+     * 
+     */
+    public void setSalary(double value) {
+        this.salary = value;
     }
 
 }
